@@ -1,0 +1,166 @@
+<style>
+  .notification {
+    padding: 20px;
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .notification-button {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }                                                                                                                                                                                                  .notification-exit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+  //
+  .popup {  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: none;
+}
+.popup__inner {
+  overflow-y: scroll;
+  max-height: 100%;
+  background-color: #f2f2f2;
+  width: 90%;
+  max-width: 30em;
+  margin: 3em auto 0;
+  padding-bottom: 1.5em;
+  border-radius: 2px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+}
+
+.popup__header {
+  background-color: pink;
+  padding: 0.25em 0.75em;
+  margin-bottom: 2em;
+  text-align: right;
+}
+.popup__close {
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  background-color: none;
+  border-radius: 50%;
+  
+  .kbd { 
+  display: inline-block; 
+  font-family: inherit; 
+  font-size: 0.875em; 
+  vertical-align: 0.125em; 
+  margin-right: 0.5em;
+  color: slategray;
+    
+  .notification__image {
+  width: 8em;
+  margin: 0 auto 2em;
+  border: 0.125em solid black;
+  background-color: #000;
+  display: block;
+  
+  @media screen and (min-width: 30em) {
+    display: inline-block;
+    margin: 0 3em 0 2em;
+  }
+}
+}
+
+.notification__details {
+  margin: 0 2em 0 0;
+  text-align: center;
+  
+  @media screen and (min-width: 30em) {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+.notification__stats {
+  @extend %ui-list;
+  margin: 0 0 1rem 0;
+  
+  > li {
+    text-align: center;
+    border-right: 1px solid lightgray;
+    padding: 0 0.5em;
+    line-height: 1.1;
+    
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child { 
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+}
+  
+.notification_stat__heading {
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 0.875em;
+  margin: 0 0 0.25em 0;
+  color: slategray;
+}
+.notification_stat__number {
+  font-size: 1.75em;
+  color: slategray;
+}
+.nname {
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+  
+</style>
+<div class="notification" id="my-notification">
+ 
+  <header class="popup__header">
+      <kbd class:"kbd">X</kbd><a href="#" class="popup__close"></a>  
+    </header>
+  <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram" width="124" height="124" class="notification__image" />
+  <section class="notification__details">
+      <ul class="notification__stats">
+        <li>
+          <h3 class="notification_stat__heading"> 1000 followers for only $3.00!</h3>
+          <div class="notification_stat__number">Live and active! Only Today</div>
+        </li>
+				<h4 class="notification_text1">via Browser</h4>
+      </ul>
+      <h2 class="nname">Order Now</h2>
+      
+    </section>
+</div>
+
+
+<script>
+  // Randomly generate position and view for notification
+  var positions = ["top", "bottom", "left", "right"];
+  var views = ["10px", "20px", "30px", "40px"];
+
+  var randomPosition = positions[Math.floor(Math.random() * positions.length)];
+  var randomView = views[Math.floor(Math.random() * views.length)];
+
+  var notification = document.getElementById("my-notification");
+  notification.style[randomPosition] = randomView;
+</script>      
+  
