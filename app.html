@@ -1,0 +1,60 @@
+<style>
+  .notification {
+    padding: 20px;
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .notification-button {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }                                                                                                                                                                                                  .notification-exit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+</style>
+<div class="notification" id="my-notification">
+  <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram logo">
+  1000 followers for only $3.00!
+  <br>
+  Live and active! Only Today
+  <br>
+  <a href="https://www.instagram.com" target="_blank" class="notification-button">
+    Order now
+  </a>
+  <br>
+  via Browser
+  <img src="https://example.com/exit-icon.png" alt="Exit" class="notification-exit">
+</div>
+
+
+<script>
+  // Randomly generate position and view for notification
+  var positions = ["top", "bottom", "left", "right"];
+  var views = ["10px", "20px", "30px", "40px"];
+
+  var randomPosition = positions[Math.floor(Math.random() * positions.length)];
+  var randomView = views[Math.floor(Math.random() * views.length)];
+
+  var notification = document.getElementById("my-notification");
+  notification.style[randomPosition] = randomView;
+</script>      
+  
+  //update
+  1000 followers for only $3.00! should be bold
+  //1000 followers for only $3.00! ,  Live and active! Only Today should be in one block
