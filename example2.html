@@ -1,0 +1,29 @@
+<style>
+  .notification {
+    padding: 20px;
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1;
+  }
+</style>
+
+<a href="https://www.instagram.com" target="_blank">
+  <div class="notification" id="my-notification">
+    This is a notification message!
+  </div>
+</a>
+
+<script>
+  // Randomly generate position and view for notification
+  var positions = ["top", "bottom", "left", "right"];
+  var views = ["10px", "20px", "30px", "40px"];
+
+  var randomPosition = positions[Math.floor(Math.random() * positions.length)];
+  var randomView = views[Math.floor(Math.random() * views.length)];
+
+  var notification = document.getElementById("my-notification");
+  notification.style[randomPosition] = randomView;
+</script>
