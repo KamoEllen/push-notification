@@ -9,13 +9,7 @@
     z-index: 1;
     text-align: center;
   }
-.popup {
-  display: none;
-}
 
-.notification-button:active + .popup {
-  display:none;
-}
 
   .notification-button {
     background-color: #333;
@@ -146,8 +140,10 @@
  position: fixed;
  }
 </style>
+
+<a href="https://www.instagram.com" class="notification-button">
+
 <div class="notification" id="my-notification">
- <a href="https://www.instagram.com" class="notification-button">
 
   <header class="popup__header">
       <kbd class:"kbd">X</kbd><a href="#" class="popup__close"></a>  
@@ -165,9 +161,9 @@
       <h2 class="nname">Order Now</h2>
 	  </div>
     </section>
-	</a>
+	
 </div>
-
+</a>
 
 <script>
   // Randomly generate position and view for notification
