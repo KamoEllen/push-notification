@@ -7,7 +7,7 @@
     border-radius: 7px;
     position: fixed;
     z-index: 1;
-    text-align: right ;
+    text-align: center;
   }
 
   .notification-button {
@@ -135,13 +135,16 @@
   font-weight: 700;
   margin: 0 0 1rem 0;
 }
-  
+.left{
+ position: fixed;
+ }
 </style>
 <div class="notification" id="my-notification">
  
   <header class="popup__header">
       <kbd class:"kbd">X</kbd><a href="#" class="popup__close"></a>  
     </header>
+	<div class="left">
   <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram" width="124" height="124" class="notification__image" />
   <section class="notification__details">
       <ul class="notification__stats">
@@ -152,7 +155,7 @@
 				<h4 class="notification_text1">via Browser</h4>
       </ul>
       <h2 class="nname">Order Now</h2>
-      
+	  </div>
     </section>
 </div>
 
